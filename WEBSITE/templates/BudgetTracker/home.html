@@ -1,0 +1,113 @@
+{% extends 'BudgetTracker/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+    .home-container {
+        max-width: 900px;
+        margin: 80px auto;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .home-label {
+        color: #7e22ce;
+        font-size: 13px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+    }
+
+    .home-container h1 {
+        color: #4c1d95;
+        font-size: 38px;
+        margin-bottom: 20px;
+    }
+
+    .home-description {
+        max-width: 600px;
+        margin: 0 auto 30px;
+        color: #666;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .home-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .home-buttons a {
+        display: inline-block;
+        padding: 12px 24px;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 15px;
+    }
+
+    .create-account-button {
+        background-color: #7e22ce;
+        color: white;
+        border: 1px solid #7e22ce;
+    }
+
+    .create-account-button:hover {
+        background-color: #6b21a8;
+    }
+
+    .about-button {
+        background-color: white;
+        color: #6b21a8;
+        border: 1px solid #d8b4fe;
+    }
+
+    .about-button:hover {
+        background-color: #f3e8ff;
+    }
+
+    @media (max-width: 600px) {
+        .home-container {
+            margin: 40px 15px;
+            padding: 20px;
+        }
+
+        .home-container h1 {
+            font-size: 30px;
+        }
+
+        .home-description {
+            font-size: 15px;
+        }
+    }
+</style>
+
+<div class="home-container">
+
+    <p class="home-label">Personal Money, Made Simple</p>
+
+    <h1>Know Where Your Money Goes.</h1>
+
+    <p class="home-description">
+        BudgetTracker helps you learn about managing everyday spending
+        and building better money habits.
+    </p>
+
+    <div class="home-buttons">
+
+        <a href="{% url 'register' %}" class="create-account-button">
+            Create Account
+        </a>
+
+        <a href="{% url 'about' %}" class="about-button">
+            Learn More
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

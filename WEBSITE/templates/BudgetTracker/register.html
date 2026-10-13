@@ -1,0 +1,104 @@
+{% extends 'BudgetTracker/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+    .register-container {
+        width: 80%;
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 30px;
+        background-color: white;
+        border: 1px solid #ddd6fe;
+        border-radius: 10px;
+    }
+
+    .register-container h1 {
+        color: #6b21a8;
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .register-container form p {
+        margin-bottom: 18px;
+        color: #444;
+    }
+
+    .register-container label {
+        display: block;
+        color: #6b21a8;
+        font-size: 14px;
+        margin-bottom: 7px;
+    }
+
+    .register-container input {
+        width: 100%;
+        padding: 11px;
+        border: 1px solid #d8b4fe;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    .register-container input:focus {
+        outline: none;
+        border-color: #9333ea;
+    }
+
+    .register-container ul {
+        color: #666;
+        font-size: 12px;
+        padding-left: 20px;
+        margin-top: 5px;
+    }
+
+    .register-container .errorlist {
+        color: #dc2626;
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    .register-button {
+        width: 100%;
+        padding: 12px;
+        background-color: #7e22ce;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .register-button:hover {
+        background-color: #6b21a8;
+    }
+
+    @media (max-width: 500px) {
+        .register-container {
+            width: auto;
+            margin: 30px 15px;
+            padding: 20px;
+        }
+    }
+</style>
+
+<div class="register-container">
+
+    <h1>Create an Account</h1>
+
+    <form method="post">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit" class="register-button">
+            Create Account
+        </button>
+    </form>
+
+</div>
+
+{% endblock %}

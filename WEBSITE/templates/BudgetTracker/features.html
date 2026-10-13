@@ -1,0 +1,82 @@
+{% extends 'BudgetTracker/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+    .features-container {
+        width: 80%;
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 30px;
+        background-color: white;
+        border: 1px solid #ddd6fe;
+        border-radius: 10px;
+    }
+
+    .features-container h1 {
+        color: #6b21a8;
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .features-description {
+        color: #666;
+        font-size: 15px;
+        margin-bottom: 25px;
+        line-height: 1.6;
+    }
+
+    .features-list {
+        list-style-type: disc;
+        padding-left: 25px;
+    }
+
+    .features-list li {
+        color: #444;
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 12px;
+    }
+
+    .features-footer {
+        color: #7e22ce;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 25px;
+        border-top: 1px solid #eee;
+        padding-top: 15px;
+    }
+
+    @media (max-width: 600px) {
+        .features-container {
+            width: auto;
+            margin: 25px 15px;
+            padding: 20px;
+        }
+    }
+</style>
+
+<div class="features-container">
+
+    <h1>Our Features</h1>
+
+    <p class="features-description">
+        BudgetTracker provides simple tools to help you manage
+        your daily expenses and keep track of your spending.
+    </p>
+
+    <ul class="features-list">
+        <li>Record and categorize your daily expenses.</li>
+
+        <li>View your monthly and all-time spending totals.</li>
+
+    </ul>
+
+    <div class="features-footer">
+        BudgetTracker - Simple and easy expense tracking.
+    </div>
+
+</div>
+
+{% endblock %}
