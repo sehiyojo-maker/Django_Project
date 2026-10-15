@@ -58,4 +58,7 @@ WEBSITE/
 
 The development server uses SQLite by default and stores its local database at
 `WEBSITE/db.sqlite3`. That database is intentionally excluded from version
-control; create or update it with the migration command above.
+control; create or update it with the migration command above. Gunicorn,
+PostgreSQL's `psycopg2` adapter, and WhiteNoise are listed as deployment
+dependencies; configure the Django project for the desired production setup
+before using them.
